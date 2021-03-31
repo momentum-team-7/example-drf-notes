@@ -16,6 +16,8 @@ psycopg2-binary = "*"
 djangorestframework = "*"
 djoser = "*"
 django-cors-headers = "*"
+django-on-heroku = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.9"
