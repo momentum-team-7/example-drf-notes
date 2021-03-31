@@ -10,4 +10,10 @@ class NoteViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Note.objects.filter(user=self.request.user)
+        queryset = Note.objects.filter(user=self.request.user)
+        search_term = self.request.query_params.get('search')
+        if search_term is not None:
+            queryset = queryset.filter(
+                body__search=self.request.query_params.get('search'))
+
+        return queryset
