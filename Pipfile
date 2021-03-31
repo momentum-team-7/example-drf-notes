@@ -15,6 +15,7 @@ django-environ = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
 djoser = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.9"
