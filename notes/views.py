@@ -17,3 +17,6 @@ class NoteViewSet(ModelViewSet):
                 body__search=self.request.query_params.get('search'))
 
         return queryset
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
