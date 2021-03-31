@@ -22,6 +22,8 @@ urlpatterns = [
     path('notes/', NoteViewSet.as_view({'get': 'list'}), name="note_list"),
     path('notes/<int:pk>',
          NoteViewSet.as_view({'get': 'retrieve'}), name="note_detail"),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
     path('admin/', admin.site.urls),
 ]
 

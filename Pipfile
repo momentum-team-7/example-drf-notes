@@ -14,6 +14,7 @@ werkzeug = "*"
 django-environ = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
+djoser = "*"
 
 [requires]
 python_version = "3.9"
